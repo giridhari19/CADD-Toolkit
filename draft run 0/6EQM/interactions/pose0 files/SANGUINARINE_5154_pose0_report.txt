@@ -1,6 +1,6 @@
-	Prediction of noncovalent interactions for PDB structure SANGUINARINE_5154_POSE_0_COMPLEX_PROTEIN
+Prediction of noncovalent interactions for PDB structure SANGUINARINE_5154_POSE_0_COMPLEX_PROTEIN
 =================================================================================================
-Created on 2026/09/27 using PLIP v3.0.1
+Created on 2026/09/28 using PLIP v3.0.1
 
 If you are using PLIP in your work, please cite:
 Schake,P. Bolz,SN. et al. PLIP 2025: introducing protein–protein interactions to the protein–ligand interaction profiler. Nucl. Acids Res. (10 May 2025), gkaf361. doi: 10.1093/nar/gkaf361

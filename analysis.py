@@ -57,10 +57,10 @@ def merge_pdb():
 		(cxdir).mkdir(parents=True, exist_ok=True)
 		io.save(str(cxdir / f"{filename}_complex.pdb"))
 	print("Successfully created complex structures")
-	return protdir,cxdir
+	return protdir,cxdir,protid
 
 def interaction():
-	protdir,cxdir=merge_pdb()
+	protdir,cxdir,protid=merge_pdb()
 	cwd=protdir / "interactions"
 	cwd.mkdir(parents=True, exist_ok=True)
 	pdbs=list(cxdir.glob("*.pdb"))
@@ -88,4 +88,9 @@ def interaction():
 	subprocess.run([
 		"bash", str(script_path)
 	], cwd=protdir / "interactions")
+	subprocess.run([
+		"cp", protdir / "docked" / f"{protid}_useful.csv",
+		protdir / "interactions" / "pose0 files" / f"{protid}_useful.csv"
+
+	])
 	

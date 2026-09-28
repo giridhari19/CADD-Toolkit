@@ -33,39 +33,39 @@
       <interacting_chain id="1">A</interacting_chain>
     </interacting_chains>
     <bs_residues>
-      <bs_residue id="1" contact="False" min_dist="5.0" aa="ILE">126A</bs_residue>
-      <bs_residue id="2" contact="False" min_dist="3.4" aa="GLY">34A</bs_residue>
-      <bs_residue id="3" contact="False" min_dist="3.1" aa="GLN">73A</bs_residue>
-      <bs_residue id="4" contact="False" min_dist="3.8" aa="THR">329A</bs_residue>
-      <bs_residue id="5" contact="False" min_dist="3.5" aa="LYS">107A</bs_residue>
-      <bs_residue id="6" contact="False" min_dist="3.7" aa="TRP">115A</bs_residue>
-      <bs_residue id="7" contact="False" min_dist="5.4" aa="TRP">76A</bs_residue>
-      <bs_residue id="8" contact="False" min_dist="5.2" aa="ASP">228A</bs_residue>
-      <bs_residue id="9" contact="False" min_dist="7.2" aa="PRO">70A</bs_residue>
-      <bs_residue id="10" contact="False" min_dist="4.2" aa="ASP">32A</bs_residue>
-      <bs_residue id="11" contact="False" min_dist="5.5" aa="VAL">332A</bs_residue>
-      <bs_residue id="12" contact="False" min_dist="6.9" aa="SER">36A</bs_residue>
-      <bs_residue id="13" contact="False" min_dist="5.7" aa="GLY">230A</bs_residue>
-      <bs_residue id="14" contact="False" min_dist="6.5" aa="ASP">106A</bs_residue>
-      <bs_residue id="15" contact="False" min_dist="5.9" aa="THR">231A</bs_residue>
-      <bs_residue id="16" contact="False" min_dist="7.3" aa="SER">328A</bs_residue>
-      <bs_residue id="17" contact="False" min_dist="3.2" aa="THR">72A</bs_residue>
-      <bs_residue id="18" contact="False" min_dist="6.5" aa="VAL">69A</bs_residue>
-      <bs_residue id="19" contact="False" min_dist="5.3" aa="PHE">109A</bs_residue>
-      <bs_residue id="20" contact="False" min_dist="4.2" aa="ILE">110A</bs_residue>
-      <bs_residue id="21" contact="False" min_dist="4.6" aa="ILE">226A</bs_residue>
-      <bs_residue id="22" contact="True" min_dist="3.1" aa="TYR">71A</bs_residue>
-      <bs_residue id="23" contact="False" min_dist="6.6" aa="SER">327A</bs_residue>
-      <bs_residue id="24" contact="False" min_dist="2.8" aa="PHE">108A</bs_residue>
-      <bs_residue id="25" contact="False" min_dist="4.3" aa="ARG">235A</bs_residue>
-      <bs_residue id="26" contact="False" min_dist="3.7" aa="SER">35A</bs_residue>
-      <bs_residue id="27" contact="False" min_dist="5.6" aa="LEU">30A</bs_residue>
-      <bs_residue id="28" contact="False" min_dist="7.1" aa="GLY">330A</bs_residue>
-      <bs_residue id="29" contact="False" min_dist="6.1" aa="LYS">75A</bs_residue>
-      <bs_residue id="30" contact="False" min_dist="3.7" aa="ILE">118A</bs_residue>
-      <bs_residue id="31" contact="False" min_dist="4.8" aa="GLY">74A</bs_residue>
-      <bs_residue id="32" contact="True" min_dist="2.4" aa="TYR">198A</bs_residue>
-      <bs_residue id="33" contact="False" min_dist="4.1" aa="LYS">224A</bs_residue>
+      <bs_residue id="1" contact="False" min_dist="3.8" aa="THR">329A</bs_residue>
+      <bs_residue id="2" contact="False" min_dist="6.6" aa="SER">327A</bs_residue>
+      <bs_residue id="3" contact="False" min_dist="4.2" aa="ASP">32A</bs_residue>
+      <bs_residue id="4" contact="False" min_dist="3.1" aa="GLN">73A</bs_residue>
+      <bs_residue id="5" contact="False" min_dist="4.6" aa="ILE">226A</bs_residue>
+      <bs_residue id="6" contact="False" min_dist="7.3" aa="SER">328A</bs_residue>
+      <bs_residue id="7" contact="False" min_dist="7.1" aa="GLY">330A</bs_residue>
+      <bs_residue id="8" contact="False" min_dist="4.2" aa="ILE">110A</bs_residue>
+      <bs_residue id="9" contact="False" min_dist="3.7" aa="SER">35A</bs_residue>
+      <bs_residue id="10" contact="False" min_dist="4.8" aa="GLY">74A</bs_residue>
+      <bs_residue id="11" contact="False" min_dist="5.3" aa="PHE">109A</bs_residue>
+      <bs_residue id="12" contact="False" min_dist="5.6" aa="LEU">30A</bs_residue>
+      <bs_residue id="13" contact="False" min_dist="6.5" aa="VAL">69A</bs_residue>
+      <bs_residue id="14" contact="False" min_dist="6.9" aa="SER">36A</bs_residue>
+      <bs_residue id="15" contact="False" min_dist="4.3" aa="ARG">235A</bs_residue>
+      <bs_residue id="16" contact="False" min_dist="3.5" aa="LYS">107A</bs_residue>
+      <bs_residue id="17" contact="False" min_dist="5.5" aa="VAL">332A</bs_residue>
+      <bs_residue id="18" contact="False" min_dist="3.7" aa="TRP">115A</bs_residue>
+      <bs_residue id="19" contact="False" min_dist="5.7" aa="GLY">230A</bs_residue>
+      <bs_residue id="20" contact="False" min_dist="6.1" aa="LYS">75A</bs_residue>
+      <bs_residue id="21" contact="False" min_dist="7.2" aa="PRO">70A</bs_residue>
+      <bs_residue id="22" contact="False" min_dist="5.9" aa="THR">231A</bs_residue>
+      <bs_residue id="23" contact="False" min_dist="3.7" aa="ILE">118A</bs_residue>
+      <bs_residue id="24" contact="False" min_dist="5.2" aa="ASP">228A</bs_residue>
+      <bs_residue id="25" contact="False" min_dist="5.0" aa="ILE">126A</bs_residue>
+      <bs_residue id="26" contact="False" min_dist="2.8" aa="PHE">108A</bs_residue>
+      <bs_residue id="27" contact="False" min_dist="4.1" aa="LYS">224A</bs_residue>
+      <bs_residue id="28" contact="True" min_dist="2.4" aa="TYR">198A</bs_residue>
+      <bs_residue id="29" contact="True" min_dist="3.1" aa="TYR">71A</bs_residue>
+      <bs_residue id="30" contact="False" min_dist="6.5" aa="ASP">106A</bs_residue>
+      <bs_residue id="31" contact="False" min_dist="5.4" aa="TRP">76A</bs_residue>
+      <bs_residue id="32" contact="False" min_dist="3.2" aa="THR">72A</bs_residue>
+      <bs_residue id="33" contact="False" min_dist="3.4" aa="GLY">34A</bs_residue>
     </bs_residues>
     <interactions>
       <hydrophobic_interactions>
@@ -191,16 +191,16 @@
       <smiles_to_pdb>1:5868,2:5869,3:5870,4:5871,22:5872,21:5873,20:5874,19:5875,5:5876,6:5877,18:5878,17:5879,16:5880,15:5881,14:5882,10:5883,9:5884,8:5885,7:5886,11:5887,12:5888,13:5889,25:5890,24:5891,23:5892</smiles_to_pdb>
     </mappings>
   </bindingsite>
-  <date_of_creation>2026/09/27</date_of_creation>
+  <date_of_creation>2026/09/28</date_of_creation>
   <citation_information>Schake,P. Bolz,SN. et al. PLIP 2025: introducing protein–protein interactions to the protein–ligand interaction profiler. Nucl. Acids Res. (10 May 2025), gkaf361. doi: 10.1093/nar/gkaf361</citation_information>
   <maintainer_information>PharmAI GmbH (2020-2021) - www.pharm.ai - hello@pharm.ai</maintainer_information>
   <mode>default</mode>
   <pdbid>SANGUINARINE_5154_POSE_1_COMPLEX_PROTEIN</pdbid>
   <model>1</model>
   <filetype>PDB</filetype>
-  <pdbfile>./plipfixed.SANGUINARINE_5154_pose_1_complex_tfeqqgwu.pdb</pdbfile>
+  <pdbfile>./plipfixed.SANGUINARINE_5154_pose_1_complex_97vnlsat.pdb</pdbfile>
   <pdbfixes>True</pdbfixes>
-  <filename>plipfixed.SANGUINARINE_5154_pose_1_complex_tfeqqgwu.pdb</filename>
+  <filename>plipfixed.SANGUINARINE_5154_pose_1_complex_97vnlsat.pdb</filename>
   <excluded_ligands/>
   <covlinkages/>
 </report>
