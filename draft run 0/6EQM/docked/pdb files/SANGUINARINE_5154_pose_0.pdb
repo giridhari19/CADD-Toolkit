@@ -1,0 +1,49 @@
+COMPND    SANGUINARINE_5154_out
+HETATM    1  C1  UNL     1      33.369  72.899  17.690  1.00  0.00           C  
+HETATM    2  N1  UNL     1      32.437  73.122  18.794  1.00  0.00           N1+
+HETATM    3  C2  UNL     1      32.769  74.265  19.398  1.00  0.00           C  
+HETATM    4  C3  UNL     1      32.054  74.727  20.494  1.00  0.00           C  
+HETATM    5  C4  UNL     1      32.387  75.918  21.138  1.00  0.00           C  
+HETATM    6  C5  UNL     1      31.684  76.381  22.223  1.00  0.00           C  
+HETATM    7  C6  UNL     1      30.611  75.690  22.729  1.00  0.00           C  
+HETATM    8  C7  UNL     1      30.255  74.491  22.101  1.00  0.00           C  
+HETATM    9  C8  UNL     1      30.959  73.971  20.969  1.00  0.00           C  
+HETATM   10  C9  UNL     1      30.632  72.748  20.292  1.00  0.00           C  
+HETATM   11  C10 UNL     1      29.566  71.909  20.673  1.00  0.00           C  
+HETATM   12  C11 UNL     1      29.275  70.724  19.995  1.00  0.00           C  
+HETATM   13  C12 UNL     1      30.035  70.318  18.899  1.00  0.00           C  
+HETATM   14  C13 UNL     1      29.710  69.117  18.242  1.00  0.00           C  
+HETATM   15  C14 UNL     1      30.469  68.730  17.161  1.00  0.00           C  
+HETATM   16  C15 UNL     1      31.522  69.486  16.723  1.00  0.00           C  
+HETATM   17  C16 UNL     1      31.872  70.669  17.343  1.00  0.00           C  
+HETATM   18  C17 UNL     1      31.128  71.122  18.463  1.00  0.00           C  
+HETATM   19  C18 UNL     1      31.410  72.331  19.173  1.00  0.00           C  
+HETATM   20  O1  UNL     1      32.143  68.935  15.645  1.00  0.00           O  
+HETATM   21  C19 UNL     1      31.357  67.742  15.455  1.00  0.00           C  
+HETATM   22  O2  UNL     1      30.291  67.605  16.416  1.00  0.00           O  
+HETATM   23  O3  UNL     1      32.171  77.557  22.702  1.00  0.00           O  
+HETATM   24  C20 UNL     1      33.266  77.791  21.797  1.00  0.00           C  
+HETATM   25  O4  UNL     1      33.410  76.757  20.803  1.00  0.00           O  
+CONECT    1    2
+CONECT    2    3    3   19
+CONECT    3    4
+CONECT    4    5    9    9
+CONECT    5    6    6   25
+CONECT    6    7   23
+CONECT    7    8    8
+CONECT    8    9
+CONECT    9   10
+CONECT   10   11   11   19
+CONECT   11   12
+CONECT   12   13   13
+CONECT   13   14   18
+CONECT   14   15   15
+CONECT   15   16   22
+CONECT   16   17   17   20
+CONECT   17   18
+CONECT   18   19   19
+CONECT   20   21
+CONECT   21   22
+CONECT   23   24
+CONECT   24   25
+END
