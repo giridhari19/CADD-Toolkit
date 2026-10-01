@@ -1,14 +1,13 @@
-from dock import seldir
+from dock import seldir,selfile
 from pathlib import Path
 import time
 import requests
+import csv
 
-def molfetch_cid():
-    outdir,junk=seldir(title="Select SDF Output Directory")
-    cids=input("Enter PubChem CIDs separated by commas: ").strip().split(",")
+def molfetch_cid(vals,outdir):
     request_interval = 1 / 5
     next_request = time.monotonic()
-    for cid in cids:
+    for cid in vals:
         cid=cid.strip()
         wait_time = next_request - time.monotonic()
         if wait_time > 0:
@@ -27,15 +26,13 @@ def molfetch_cid():
                 f.write(response.content)
             print(f"Downloaded SDF for CID {cid}")
         else:
-            print(f"Failed to fetch SDF for CID {cid}.\nMessage: {response.text}")
+            print(f"Failed to fetch SDF for CID {cid}. HTTP Status Code: {response.status_code}")
     print(f"Fetching complete. SDF files are saved in {outdir}")
 
-def molfetch_smiles():
-    outdir,junk=seldir(title="Select SDF Output Directory")
-    smiles_list=input("Enter SMILES strings separated by commas: ").strip().split(",")
+def molfetch_smiles(vals,outdir):
     request_interval = 1 / 5
     next_request = time.monotonic()
-    for smiles in smiles_list:
+    for smiles in vals:
         smiles=smiles.strip()
         url = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/cids/TXT"
         payload= {"smiles": smiles}
@@ -71,11 +68,34 @@ def molfetch_smiles():
 
 def molfetch():
     choice=input("Fetch molecules by PubChem CIDs or SMILES? (Enter 1 for CIDs, 2 for SMILES) > ").strip()
+    csvraw=selfile(title="Select CSV File")
+    if csvraw.suffix.lower() == '.tsv':
+        delimit = '\t'
+    elif csvraw.suffix.lower() == '.csv':
+        delimit = ','
+    with open(csvraw, "r") as f:
+        reader=csv.DictReader(f, delimiter=delimit)
+        rows=list(reader)
+        columns=[
+            fieldname
+            for fieldname in reader.fieldnames or []
+            if any((row.get(fieldname) or "").strip() for row in rows)
+        ]
+        print("CSV Columns:", columns)
+        while True:
+            col=input("Enter the column name containing CIDs or SMILES > ").strip()
+            if col in columns:
+                break
+            else:
+                print(f"Column '{col}' not found in CSV. Please enter a valid column name.")
+        vals=[row[col].strip() for row in rows if (row.get(col) or "").strip()]
+    outdir,junk=seldir(title="Select Output Directory")
     if choice=="1":
-        molfetch_cid()
+        molfetch_cid(vals=vals,outdir=outdir)
     elif choice=="2":
-        molfetch_smiles()
+        molfetch_smiles(vals=vals,outdir=outdir)
     else:
         print("Invalid choice. Please enter '1' or '2'.")
+    return outdir
         
     

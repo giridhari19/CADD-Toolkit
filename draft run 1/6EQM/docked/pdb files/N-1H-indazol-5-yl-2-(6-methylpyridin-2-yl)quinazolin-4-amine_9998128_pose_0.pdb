@@ -1,0 +1,53 @@
+COMPND    N-1H-indazol-5-yl-2-(6-methylpyridin-2-yl)quinazolin-4-amine_9998128_out
+HETATM    1  C1  UNL     1      28.113  66.858  22.979  1.00  0.00           C  
+HETATM    2  C2  UNL     1      29.214  66.844  21.973  1.00  0.00           C  
+HETATM    3  C3  UNL     1      30.249  65.935  22.112  1.00  0.00           C  
+HETATM    4  C4  UNL     1      31.260  65.949  21.156  1.00  0.00           C  
+HETATM    5  C5  UNL     1      31.205  66.859  20.107  1.00  0.00           C  
+HETATM    6  C6  UNL     1      30.126  67.730  20.055  1.00  0.00           C  
+HETATM    7  C7  UNL     1      30.002  68.699  18.998  1.00  0.00           C  
+HETATM    8  N1  UNL     1      29.989  69.990  19.367  1.00  0.00           N  
+HETATM    9  C8  UNL     1      29.872  70.864  18.350  1.00  0.00           C  
+HETATM   10  N2  UNL     1      29.854  72.239  18.690  1.00  0.00           N  
+HETATM   11  C9  UNL     1      30.786  73.067  19.335  1.00  0.00           C  
+HETATM   12  C10 UNL     1      31.997  73.381  18.704  1.00  0.00           C  
+HETATM   13  C11 UNL     1      32.948  74.204  19.316  1.00  0.00           C  
+HETATM   14  C12 UNL     1      32.635  74.699  20.585  1.00  0.00           C  
+HETATM   15  N3  UNL     1      33.328  75.511  21.441  1.00  0.00           N  
+HETATM   16  N4  UNL     1      32.687  75.771  22.593  1.00  0.00           N  
+HETATM   17  C13 UNL     1      31.541  75.098  22.466  1.00  0.00           C  
+HETATM   18  C14 UNL     1      31.443  74.408  21.239  1.00  0.00           C  
+HETATM   19  C15 UNL     1      30.498  73.579  20.611  1.00  0.00           C  
+HETATM   20  C16 UNL     1      29.772  70.490  17.012  1.00  0.00           C  
+HETATM   21  C17 UNL     1      29.651  71.422  15.967  1.00  0.00           C  
+HETATM   22  C18 UNL     1      29.554  70.982  14.651  1.00  0.00           C  
+HETATM   23  C19 UNL     1      29.579  69.618  14.379  1.00  0.00           C  
+HETATM   24  C20 UNL     1      29.699  68.698  15.425  1.00  0.00           C  
+HETATM   25  C21 UNL     1      29.798  69.111  16.751  1.00  0.00           C  
+HETATM   26  N5  UNL     1      29.913  68.211  17.744  1.00  0.00           N  
+HETATM   27  N6  UNL     1      29.126  67.743  20.967  1.00  0.00           N  
+CONECT    1    2
+CONECT    2    3   27   27
+CONECT    3    4    4
+CONECT    4    5
+CONECT    5    6    6
+CONECT    6    7   27
+CONECT    7    8   26   26
+CONECT    8    9    9
+CONECT    9   10   20
+CONECT   10   11
+CONECT   11   12   19   19
+CONECT   12   13   13
+CONECT   13   14
+CONECT   14   15   18   18
+CONECT   15   16
+CONECT   16   17   17
+CONECT   17   18
+CONECT   18   19
+CONECT   20   21   21   25
+CONECT   21   22
+CONECT   22   23   23
+CONECT   23   24
+CONECT   24   25   25
+CONECT   25   26
+END

@@ -17,6 +17,11 @@ def gen_prot():
 		"--box_enveloping", f"{protid}lig.sdf",
 		"--padding", pad
 		]
+	defaltloc1=input("Value for default altloc. Leave blank if not needed > ").strip()
+	print("Format for wanted altloc: CHAIN:INDEX1,INDEX2,...=altloc1,CHAIN1...=altloc2,...")
+	wntaltloc1=input("Value for wanted altloc. Leave blank for no wanted altloc > ").strip()
+	if defaltloc1: payload.extend(["--default_altloc", defaltloc1])
+	if wntaltloc1: payload.extend(["--wanted_altloc", wntaltloc1])
 	result=subprocess.run(payload, cwd=protdir, capture_output=True, text=True)
 	print(result.stdout)
 	if result.returncode!=0 and "alternate location" in result.stdout:
@@ -27,3 +32,4 @@ def gen_prot():
 		if defaltloc: payload.extend(["--default_altloc", defaltloc])
 		if wntaltloc: payload.extend(["--wanted_altloc", wntaltloc])
 		subprocess.run(payload, cwd=protdir)
+	return protdir

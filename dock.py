@@ -11,24 +11,36 @@ def seldir(title="Select Protein Directory"):
 	protid=protdir.stem
 	return protdir,protid
 
-def dock():
-	protdir,protid=seldir()
+def selfile(title="Select File"):
+	root=Tk()
+	root.withdraw()
+	filepath=Path(filedialog.askopenfilename(title=title))
+	return filepath
+
+def dock(dir=None):
+	if dir is None:
+		protdir,protid=seldir()
+	else:
+		protdir=Path(dir)
+		protid=protdir.stem
 	print("Ensure ligands are present in folder named 'ligands' in the same directory as protein")
 	(protdir / "docked").mkdir(parents=True, exist_ok=True)
 	exh=input("Enter exhaustiveness value. Leave blank for 8 > ").strip()
 	nmod=input("Enter num modes value. Leave blank for 9 > ").strip()
 	enrag=input("Enter energy range value. Leave blank for 3 > ").strip()
+	seed=input("Enter seed value. Leave blank for random > ").strip()
 	payload=[
 		"vina", 
 		"--receptor", f"{protid}.pdbqt",
 		"--config", f"{protid}.box.txt",
 		"--batch", "ligands",
 		"--dir", "docked",
-		"--verbosity", "2"
+		"--verbosity", "2",
 		]
 	if exh: payload.extend(["--exhaustiveness", exh])
 	if nmod: payload.extend(["--num_modes", nmod])
 	if enrag: payload.extend(["--energy_range", enrag])
+	if seed: payload.extend(["--seed", seed])
 	with open(protdir / "docking.log", "w") as log:
 		process=subprocess.Popen(payload, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, cwd=protdir)
 		while True:

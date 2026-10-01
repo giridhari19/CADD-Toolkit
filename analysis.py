@@ -4,8 +4,12 @@ import subprocess
 from rdkit import Chem
 from Bio.PDB import PDBParser, PDBIO
 
-def sdf_to_pdb():
-	protdir,protid=seldir()
+def sdf_to_pdb(dir=None):
+	if dir is None:
+		protdir,protid=seldir()
+	else:
+		protdir=Path(dir)
+		protid=protdir.stem
 	sdff=protdir / "docked" / "sdf files"
 	sdfs=list(sdff.glob("*.sdf"))
 	pdbf=protdir / "docked" / "pdb files"
@@ -36,8 +40,8 @@ def sdf_to_pdb():
 	subprocess.run(["rm", f"{protid}.pqr"], cwd=protdir, check=True)
 	return protdir,protid,pdbf
 
-def merge_pdb():
-	protdir,protid,pdbf=sdf_to_pdb()
+def merge_pdb(dir=None):
+	protdir,protid,pdbf=sdf_to_pdb(dir)
 	prot= protdir / f"{protid}_h.pdb"
 	parser=PDBParser(QUIET=True)
 	ligs=list(pdbf.glob("*.pdb"))
@@ -59,8 +63,8 @@ def merge_pdb():
 	print("Successfully created complex structures")
 	return protdir,cxdir,protid
 
-def interaction():
-	protdir,cxdir,protid=merge_pdb()
+def interaction(dir=None):
+	protdir,cxdir,protid=merge_pdb(dir)
 	cwd=protdir / "interactions"
 	cwd.mkdir(parents=True, exist_ok=True)
 	pdbs=list(cxdir.glob("*.pdb"))

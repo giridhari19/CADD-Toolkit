@@ -38,7 +38,13 @@ def main():
 		elif choice=="4":
 			rep=int(input("Enter number of proteins to be prepared > "))
 			for _ in range(rep): 
-				protprep.gen_prot()
+				protdir=protprep.gen_prot()
+				dk=input("Do you want to dock this protein? 1 for yes, blank for no > ").strip()
+				if dk=="1":
+					dock.dock(dir=protdir)
+					ana=input("Do you want to analyze this protein? 1 for yes, blank for no > ").strip()
+					if ana=="1":
+						analysis.interaction(dir=protdir)
 			if end():
 				print("Thank you for using the CADD Toolkit. Goodbye!")
 				break
@@ -53,7 +59,10 @@ def main():
 				print("Thank you for using the CADD Toolkit. Goodbye!")
 				break
 		elif choice=="1":
-			molfetch.molfetch()
+			outdir=molfetch.molfetch()
+			nam=input("Do you want to rename the fetched molecules? 1 for yes, blank for no > ").strip()
+			if nam=="1":
+				molren.molren(dir=outdir)
 			if end():
 				print("Thank you for using the CADD Toolkit. Goodbye!")
 				break
