@@ -5,8 +5,11 @@ from rdkit import Chem
 import requests
 import time
 
-def molren():
-    moldir,junk=seldir(title="Select SDF Directory")
+def molren(dir=None):
+    if dir is None:
+        moldir,junk=seldir(title="Select SDF Directory")
+    else:
+        moldir=Path(dir)
     (moldir / "renamed").mkdir(parents=True, exist_ok=True)
     request_interval= 1 / 5
     next_request = time.monotonic()

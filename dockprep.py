@@ -13,7 +13,7 @@ def get_mols(selbatch=0,seldir=0):
 	if seldir:
 		out_dir = Path(filedialog.askdirectory( title="Select Output Folder" ))
 	else:
-		out_dir=inp.parent / inp.stem if not selbatch else inp / "Result"
+		out_dir=inp.parent / inp.stem if not selbatch else inp / "ligands"
 		out_dir.mkdir(parents=True, exist_ok=True)
 	if selbatch:
 		sdfs=list(inp.glob("*.sdf"))
@@ -36,6 +36,7 @@ def gen_lig_qt():
 	fail=0
 	succ=0
 	selbatch=input("Batch prep multiple sdfs? Leave blank for no ")
+	print("Ensure to select ligands folder for non automatic output directory generation")
 	seldir=input("Select output directory? Leave blank for autogeneration ")
 	sdfs,out_dir=get_mols(selbatch,seldir)
 	for sdf in sdfs:
