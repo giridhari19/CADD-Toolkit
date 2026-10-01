@@ -2,7 +2,6 @@ from pathlib import Path
 import subprocess
 from tkinter import filedialog, Tk
 import pandas as pd
-from Bio.PDB import PDBParser
 
 def seldir(title="Select Protein Directory"):
 	root=Tk()

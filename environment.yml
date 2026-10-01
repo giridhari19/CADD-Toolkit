@@ -1,0 +1,14 @@
+name: dock
+channels:
+  - conda-forge
+dependencies:
+  - biopython
+  - meeko
+  - pathlib
+  - pdb2pqr
+  - pip
+  - plip
+  - pymol-open-source
+  - python=3.11
+  - rdkit
+  - vina
