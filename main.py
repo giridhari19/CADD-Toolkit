@@ -49,7 +49,10 @@ def main():
 				print("Thank you for using the CADD Toolkit. Goodbye!")
 				break
 		elif choice=="5":
-			dock.dock()
+			protdir=dock.dock()
+			ana=input("Do you want to analyze this protein? 1 for yes, blank for no > ").strip()
+			if ana=="1":
+				analysis.interaction(dir=protdir)
 			if end():
 				print("Thank you for using the CADD Toolkit. Goodbye!")
 				break

@@ -10,7 +10,7 @@ def molren(dir=None):
         moldir,junk=seldir(title="Select SDF Directory")
     else:
         moldir=Path(dir)
-    (moldir / "renamed").mkdir(parents=True, exist_ok=True)
+    outdir=seldir(title="Select Output Directory")[0]
     request_interval= 1 / 5
     next_request = time.monotonic()
     for mol in moldir.glob("*.sdf"):
@@ -37,10 +37,11 @@ def molren(dir=None):
             if response.status_code==200:
                 data=response.json()
                 synonym=data["InformationList"]["Information"][0]["Synonym"][0]
+                synonym=synonym.replace("_", "-")
                 if synonym:
                     print(f"Renaming molecule with CID {cid} to {synonym}")
                     m.SetProp("_Name", synonym)
-                    output_path=moldir / "renamed" / f"{synonym}_CID_{cid}.sdf"
+                    output_path=outdir / f"{synonym}_CID_{cid}.sdf"
                     writer=Chem.SDWriter(str(output_path))
                     writer.write(m)
                 else:
@@ -48,8 +49,8 @@ def molren(dir=None):
             else:
                 print(f"Warning: Failed to fetch synonym for CID {cid}.\n{response.text}")
                 m.SetProp("_Name", f"{cid}")
-                output_path=moldir / "renamed" / f"UnknownName_CID_{cid}.sdf"
+                output_path=outdir / f"UnknownName_CID_{cid}.sdf"
                 writer=Chem.SDWriter(str(output_path))
                 writer.write(m)
     writer.close()
-    print(f"Renaming complete. Renamed files are saved in {moldir / 'renamed'}")
+    print(f"Renaming complete. Renamed files are saved in {outdir}")

@@ -49,6 +49,23 @@ def dock(dir=None):
 			log.write(char)
 		process.wait()
 
+	sdff=protdir / "docked" / "sdf files"
+	sdff.mkdir(parents=True, exist_ok=True)
+	qts=list((protdir / "docked").glob("*.pdbqt"))
+	print("Exporting generated pdbqt files as sdf")
+	subprocess.run([
+		"mk_export.py",
+		*qts, 
+		"--suffix", "_docked"
+		], cwd=sdff, check=True)
+	print("Exported Successfully!\n ")
+
+	subprocess.run([
+		"obrms", 
+		f"{protid}lig.sdf",
+		f"./docked/sdf files/{protid}_unknown_cid_out_docked.sdf"
+		], cwd=protdir, check=True)
+
 	pdbqts=list((protdir / "docked").glob("*.pdbqt"))
 	results=[]
 	for file in pdbqts:
@@ -80,13 +97,5 @@ def dock(dir=None):
 	top=top[['Name','CID','Affinity']]
 	print(top)
 	top.to_csv(protdir / "docked" / f"{protid}_useful.csv", index=False)
-	sdff=protdir / "docked" / "sdf files"
-	sdff.mkdir(parents=True, exist_ok=True)
-	qts=list((protdir / "docked").glob("*.pdbqt"))
-	print("Exporting generated pdbqt files as sdf")
-	subprocess.run([
-		"mk_export.py",
-		*qts, 
-		"--suffix", "_docked"
-		], cwd=sdff, check=True)
-	print("Exported Successfully!")
+	return protdir
+
