@@ -1,8 +1,34 @@
 # CADD Pipeline
 ### *A modular command-line toolkit for automating repetitive ligand retrieval, molecular preparation, molecular docking, and post-docking interaction report generation.*
 
----
+![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![Linux](https://img.shields.io/badge/Platform-Linux-E95420?logo=linux&logoColor=white)
+![RDKit](https://img.shields.io/badge/RDKit-Cheminformatics-1f77b4)
+![Meeko](https://img.shields.io/badge/Meeko-Docking%20Preparation-6f42c1)
+![AutoDock Vina](https://img.shields.io/badge/AutoDock%20Vina-Docking-2ea44d)
+![PLIP](https://img.shields.io/badge/PLIP-Interaction%20Analysis-teal)
+
 ## Table of Contents
+
+* [Project Motivation](#project-motivation)
+* [Project Objective](#project-objective)
+* [Workflow](#workflow)
+* [Features](#features)
+* [Key Design Decisions](#key-design-decisions)
+* [Example Usage](#example-usage)
+
+  * [Example Directory](#example-directory)
+  * [Initialization](#initialization)
+  * [1. Retrieve and Rename Ligands](#1-retrieve-and-rename-ligands)
+  * [2. Prepare the Ligands](#2-prepare-the-ligands)
+  * [3. Prepare the Protein](#3-prepare-the-protein)
+  * [4. Perform Molecular Docking](#4-perform-molecular-docking)
+  * [5. Generate Interaction Reports](#5-generate-interaction-reports)
+  * [Complete Workflow](#complete-workflow)
+* [Reproducibility Considerations](#reproducibility-considerations)
+* [Error Handling](#error-handling)
+* [Technical Limitations](#technical-limitations)
+* [Future Development](#future-development)
 
 ---
 ## Project Motivation
@@ -77,6 +103,8 @@ example/
 ```
 
 ### Initialization:
+>**Ensure you are either using Linux or WSL for the entire workflow.**     
+
 First clone this repo using
 ```bash
 git clone https://github.com/giridhari19/CADD-Toolkit.git)
