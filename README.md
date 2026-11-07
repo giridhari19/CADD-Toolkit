@@ -107,7 +107,7 @@ example/
 
 First clone this repo using
 ```bash
-git clone https://github.com/giridhari19/CADD-Toolkit.git)
+git clone https://github.com/giridhari19/CADD-Toolkit.git
 ```
 Then setup the Environment using micromamba
 ```bash
